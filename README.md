@@ -3,6 +3,12 @@ AMError
 
 ## Changelog
 
+- **0.3.0**
+ - Added `AMErrorMakeWithDesc`, `AMSetReturnError`
+
+- **0.2.7**
+ - Xcode 10 compatibility and general modernization
+
 - **0.2.7**
  - Xcode 7 compatibility and general modernization
 

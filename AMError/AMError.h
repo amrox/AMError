@@ -9,9 +9,13 @@
 
 #define AMErrorMakeWithInfo(domain, code, info) _AMErrorMake(code, #code, domain, __FILE__, __LINE__, info)
 
+#define AMErrorMakeWithDesc(domain, code, desc, ...) _AMErrorMakeWithDescription(code, #code, domain, __FILE__, __LINE__, desc, ##__VA_ARGS__)
+
 #define AMErrorWrap(error) _AMErrorWrap(error, __FILE__, __LINE__)
 
 #define AMOutputErrorAssign(outError, error) _AMOutputErrorAssign(outError, error)
+
+#define AMSetReturnError(outError, domain, code, description, ...) _AMOutputErrorAssign(outError, _AMErrorMakeWithDescription(code, #code, domain, __FILE__, __LINE__, description, ##__VA_ARGS__));
 
 ///---------------
 /// @name Typedefs
@@ -176,12 +180,14 @@ extern NSString * _Nonnull const AMErrorNameKey;  // NSString
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-    extern AMMutableError * _Null_unspecified _AMErrorMake(NSInteger errorCode, char const * _Null_unspecified errorName, NSString * _Null_unspecified domain, char const * _Null_unspecified fileName, int lineNumber, NSDictionary * _Null_unspecified userInfo);
-
-    extern AMMutableError  * _Null_unspecified  _AMErrorWrap(NSError * _Null_unspecified origError, char const * _Null_unspecified fileName, int lineNumber);
-
-    static inline void _AMOutputErrorAssign(NSError * _Null_unspecified * _Null_unspecified outError, NSError *_Null_unspecified error)
+    
+    extern AMMutableError * _Nonnull _AMErrorMake(NSInteger errorCode, char const * _Nonnull errorName, NSString * _Nonnull domain, char const * _Nonnull fileName, int lineNumber, NSDictionary * _Nullable userInfo);
+    
+    extern AMMutableError * _Nonnull _AMErrorMakeWithDescription(NSInteger errorCode, char const * _Nonnull errorName, NSString * _Nonnull domain, char const * _Nonnull fileName, int lineNumber, NSString * _Nonnull descriptionFmt, ...);
+    
+    extern AMMutableError  * _Nonnull _AMErrorWrap(NSError * _Nonnull origError, char const * _Nonnull fileName, int lineNumber);
+    
+    static inline void _AMOutputErrorAssign(NSError * _Nullable * _Nullable outError, NSError *_Nullable error)
     {
         if (outError != nil) *outError = error;
     }

@@ -72,6 +72,21 @@ context(@"macro creation with info", ^{
     });
 });
 
+
+context(@"macro creation with description", ^{
+    
+    __block AMError *error;
+
+    beforeEach(^{
+        error = AMErrorMakeWithDesc(ERROR_DOMAIN, ERROR_CODE_1, ERROR_CODE_1_DESCRIPTION_A);
+    });
+
+    specify(^{
+        [[error.localizedDescription should] equal:ERROR_CODE_1_DESCRIPTION_A];
+    });
+    
+});
+
 context(@"macro creation with existing error", ^{
 
     __block AMError *error;
@@ -181,7 +196,28 @@ context(@"custom strings table", ^{
     specify(^{
         [[error.localizedDescription should] equal:ERROR_CODE_1_DESCRIPTION_B];
     });
-
 });
+
+context(@"set return error", ^{
+    
+    __block AMError *error;
+    
+    beforeEach(^{
+        AMSetReturnError(&error, ERROR_DOMAIN, ERROR_CODE_1, ERROR_CODE_1_DESCRIPTION_B);
+    });
+    
+    specify(^{
+        [[[error domain] should] equal:ERROR_DOMAIN];
+    });
+
+    specify(^{
+        [[theValue([error code]) should] equal:theValue(ERROR_CODE_1)];
+    });
+
+    specify(^{
+        [[[error localizedDescription] should] equal:ERROR_CODE_1_DESCRIPTION_B];
+    });
+});
+
 
 SPEC_END
