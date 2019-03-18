@@ -76,7 +76,7 @@ __strong static NSMutableDictionary *stringsTableMap = nil;
     return [super localizedDescription];
 }
 
-- (id)objectForKeyedSubscript:(id <NSCopying>)key
+- (id)objectForKeyedSubscript:(NSString *)key
 {
     return [self userInfo][key];
 }

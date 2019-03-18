@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AMError"
-  s.version      = "0.2.7"
+  s.version      = "0.2.8"
   s.summary      = "An enhanced NSError subclass."
   s.description  = <<-DESC
                    * Accessors for all common 'UserInfo' keys
@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://github.com/amrox/AMError"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
-  s.author       = { "Andy Mroczkowski" => "andy@mrox.net" }
-  s.ios.deployment_target = '6.0'
+  s.author       = { "Andy Mroczkowski" => "a@mrox.co" }
+  s.ios.deployment_target = '8.4'
   s.osx.deployment_target = '10.8'
   s.source       = { :git => "https://github.com/amrox/AMError.git", :tag => "#{s.version}" }
   s.source_files  = 'AMError/AMError.{h,m}'

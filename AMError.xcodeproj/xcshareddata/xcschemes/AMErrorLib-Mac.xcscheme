@@ -37,22 +37,8 @@
                BlueprintName = "AMError-MacTests"
                ReferencedContainer = "container:AMError.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "AMError_MacTests">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B363899F17E2373A00F2BBE4"
-            BuildableName = "libAMError-Mac.a"
-            BlueprintName = "AMError-Mac"
-            ReferencedContainer = "container:AMError.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -84,15 +70,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B363899F17E2373A00F2BBE4"
-            BuildableName = "libAMError-Mac.a"
-            BlueprintName = "AMError-Mac"
-            ReferencedContainer = "container:AMError.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

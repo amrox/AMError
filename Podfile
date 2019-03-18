@@ -1,12 +1,12 @@
 
 target "AMError-iOSTests" do
-	platform :ios, "6.0"
-	pod 'Kiwi', '~> 2.4.0'
+	platform :ios, "8.4"
+	pod 'Kiwi'
 end
 
 target "AMError-MacTests" do
-	platform :osx, "10.7"
-	pod 'Kiwi', '~> 2.4.0'
+	platform :osx, "10.8"
+	pod 'Kiwi'
 end
 
 

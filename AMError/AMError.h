@@ -13,12 +13,18 @@
 
 #define AMOutputErrorAssign(outError, error) _AMOutputErrorAssign(outError, error)
 
+///---------------
+/// @name Typedefs
+//----------------
+
+typedef NSError *__autoreleasing _Nullable * _Nullable AMOutError;
+
 
 ///-------------------------------
 /// @name Additional UserInfo Keys
 //--------------------------------
 
-extern  NSString * _Nonnull const AMErrorOriginKey;  // NSString
+extern NSString * _Nonnull const AMErrorOriginKey;  // NSString
 extern NSString * _Nonnull const AMErrorNameKey;  // NSString
 
 
