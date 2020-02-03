@@ -221,7 +221,6 @@
 				A15D4088F59BE8A91FE66FB4 /* Pods-AMError-iOSTests.debug.xcconfig */,
 				AD11C9E82B460C51A2B5EABE /* Pods-AMError-iOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -318,7 +317,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0720;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					B310174A1C973E9D007E00DC = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -333,6 +332,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B363899517E2371B00F2BBE4;
@@ -662,6 +662,7 @@
 		B363899A17E2371B00F2BBE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -697,6 +698,7 @@
 		B363899B17E2371B00F2BBE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
