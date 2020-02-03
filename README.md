@@ -1,6 +1,8 @@
 AMError
 =======
 
+![CI](https://github.com/amrox/AMError/workflows/CI/badge.svg)
+
 ## Changelog
 
 - **0.3.0**
