@@ -12,4 +12,4 @@ jobs:
     - name: Install Dependencies
       run: pod install
     - name: Run Tests
-      run: fastlane test
+      run: bundle exec fastlane test
