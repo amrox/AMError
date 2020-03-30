@@ -329,11 +329,11 @@
 			};
 			buildConfigurationList = B363899917E2371B00F2BBE4 /* Build configuration list for PBXProject "AMError" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = B363899517E2371B00F2BBE4;
 			productRefGroup = B36389A117E2373A00F2BBE4 /* Products */;
